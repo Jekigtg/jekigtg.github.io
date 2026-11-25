@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="web_standard" name="shell-type">
+  <title>Mohammad Zakki Ramadhan // Automotive &amp; Visual Communication Portfolio</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <style>
+    @layer base {
+      html {
+        margin: 0;
+        padding: 0;
+        overflow-y: auto;
+        overflow-x: clip;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        overflow-x: clip;
+      }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { width: 8px; height: 0px; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+    #hero-slider-section {
+      overscroll-behavior-x: contain;
+    }
+
+    /* Kursor Velg Advan Racing TC-4 Pixel Art (Khusus Perangkat Pointer / Laptop) */
+    @media (hover: hover) and (pointer: fine) {
+      *, *::before, *::after {
+        cursor: none !important;
+      }
+      #tc4-cursor {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        pointer-events: none;
+        z-index: 99999;
+        transform: translate3d(-100px, -100px, 0);
+        will-change: transform;
+        filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.38));
+        transition: opacity 0.2s ease;
+      }
+      #tc4-cursor-inner {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.18s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      #tc4-cursor.is-hover #tc4-cursor-inner {
+        transform: scale(1.22);
+      }
+      #tc4-cursor.is-down #tc4-cursor-inner {
+        transform: scale(0.9);
+      }
+    }
+    @media (hover: none), (pointer: coarse) {
+      #tc4-cursor {
+        display: none !important;
+      }
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-tertiary-container": "#ffffff",
+            "background": "#f8f9fb",
+            "surface-variant": "#e1e2e4",
+            "on-secondary": "#ffffff",
+            "on-secondary-fixed": "#191c21",
+            "outline-variant": "#e9bcb7",
+            "primary-fixed": "#ffdad6",
+            "tertiary": "#5c5d61",
+            "on-primary": "#ffffff",
+            "surface-bright": "#f8f9fb",
+            "on-surface-variant": "#5e3f3b",
+            "on-primary-container": "#fffeff",
+            "secondary": "#5c5e65",
+            "outline": "#936e6a",
+            "error": "#ba1a1a",
+            "secondary-container": "#dedfe7",
+            "surface-container-low": "#f3f4f6",
+            "on-tertiary-fixed": "#1a1c1f",
+            "on-secondary-container": "#606369",
+            "secondary-fixed-dim": "#c4c6ce",
+            "tertiary-container": "#757679",
+            "on-background": "#191c1e",
+            "inverse-on-surface": "#f0f1f3",
+            "on-primary-fixed": "#410002",
+            "surface": "#f8f9fb",
+            "primary-container": "#eb0a1e",
+            "on-secondary-fixed-variant": "#44474d",
+            "surface-container-lowest": "#ffffff",
+            "error-container": "#ffdad6",
+            "tertiary-fixed": "#e2e2e6",
+            "tertiary-fixed-dim": "#c6c6ca",
+            "on-surface": "#191c1e",
+            "inverse-primary": "#ffb4ab",
+            "on-error-container": "#93000a",
+            "on-error": "#ffffff",
+            "primary": "#bd0014",
+            "on-primary-fixed-variant": "#93000d",
+            "surface-container-high": "#e7e8ea",
+            "secondary-fixed": "#e1e2ea",
+            "surface-dim": "#d9dadc",
+            "surface-container": "#edeef0",
+            "surface-container-highest": "#e1e2e4",
+            "on-tertiary": "#ffffff",
+            "surface-tint": "#c00014",
+            "on-tertiary-fixed-variant": "#45474a",
+            "inverse-surface": "#2e3132",
+            "primary-fixed-dim": "#ffb4ab"
+          },
+          borderRadius: {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          spacing: {
+            "margin": "4rem",
+            "space-sm": "0.5rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.5rem",
+            "space-xl": "3rem",
+            "space-md": "1rem",
+            "gutter-sm": "1rem",
+            "margin-tablet": "2rem",
+            "gutter": "1.5rem",
+            "margin-mobile": "1.25rem"
+          },
+          fontFamily: {
+            "body-sm": ["Plus Jakarta Sans"],
+            "label-code": ["Space Grotesk"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "title-md": ["Plus Jakarta Sans"],
+            "label-technical": ["Space Grotesk"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "display-hero-mobile": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "display-hero": ["Plus Jakarta Sans"]
+          },
+          fontSize: {
+            "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "label-code": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "500" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-technical": ["12px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "600" }],
+            "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "display-hero-mobile": ["38px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "800" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "display-hero": ["64px", { "lineHeight": "70px", "letterSpacing": "-0.035em", "fontWeight": "800" }]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-surface-bright font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary">
+
+  <!-- Kursor Velg Advan Racing TC-4 Pixel-Art Berputar -->
+  <div id="tc4-cursor" aria-hidden="true">
+    <div id="tc4-cursor-inner">
+      <svg id="tc4-wheel-svg" width="40" height="40" viewBox="0 0 48 48" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+        <!-- Outer Rim Pixel Border & Gunmetal Barrel -->
+        <rect x="16" y="2" width="16" height="2" fill="#0d0f12"/>
+        <rect x="11" y="4" width="5" height="2" fill="#0d0f12"/>
+        <rect x="32" y="4" width="5" height="2" fill="#0d0f12"/>
+        <rect x="8" y="6" width="3" height="2" fill="#0d0f12"/>
+        <rect x="37" y="6" width="3" height="2" fill="#0d0f12"/>
+        <rect x="6" y="8" width="2" height="3" fill="#0d0f12"/>
+        <rect x="40" y="8" width="2" height="3" fill="#0d0f12"/>
+        <rect x="4" y="11" width="2" height="5" fill="#0d0f12"/>
+        <rect x="42" y="11" width="2" height="5" fill="#0d0f12"/>
+        <rect x="2" y="16" width="2" height="16" fill="#0d0f12"/>
+        <rect x="44" y="16" width="2" height="16" fill="#0d0f12"/>
+        <rect x="4" y="32" width="2" height="5" fill="#0d0f12"/>
+        <rect x="42" y="32" width="2" height="5" fill="#0d0f12"/>
+        <rect x="6" y="37" width="2" height="3" fill="#0d0f12"/>
+        <rect x="40" y="37" width="2" height="3" fill="#0d0f12"/>
+        <rect x="8" y="40" width="3" height="2" fill="#0d0f12"/>
+        <rect x="37" y="40" width="3" height="2" fill="#0d0f12"/>
+        <rect x="11" y="42" width="5" height="2" fill="#0d0f12"/>
+        <rect x="32" y="42" width="5" height="2" fill="#0d0f12"/>
+        <rect x="16" y="44" width="16" height="2" fill="#0d0f12"/>
+
+        <!-- Gunmetal Lip Ring -->
+        <rect x="16" y="4" width="16" height="3" fill="#2a2f37"/>
+        <rect x="11" y="6" width="5" height="3" fill="#2a2f37"/>
+        <rect x="32" y="6" width="5" height="3" fill="#2a2f37"/>
+        <rect x="8" y="8" width="4" height="4" fill="#2a2f37"/>
+        <rect x="36" y="8" width="4" height="4" fill="#2a2f37"/>
+        <rect x="6" y="11" width="3" height="5" fill="#2a2f37"/>
+        <rect x="39" y="11" width="3" height="5" fill="#2a2f37"/>
+        <rect x="4" y="16" width="3" height="16" fill="#2a2f37"/>
+        <rect x="41" y="16" width="3" height="16" fill="#2a2f37"/>
+        <rect x="6" y="32" width="3" height="5" fill="#2a2f37"/>
+        <rect x="39" y="32" width="3" height="5" fill="#2a2f37"/>
+        <rect x="8" y="36" width="4" height="4" fill="#2a2f37"/>
+        <rect x="36" y="36" width="4" height="4" fill="#2a2f37"/>
+        <rect x="11" y="39" width="5" height="3" fill="#2a2f37"/>
+        <rect x="32" y="39" width="5" height="3" fill="#2a2f37"/>
+        <rect x="16" y="41" width="16" height="3" fill="#2a2f37"/>
+
+        <!-- Machined Metallic Rim Highlights -->
+        <rect x="18" y="4" width="12" height="1" fill="#cbd5e1"/>
+        <rect x="12" y="7" width="4" height="1" fill="#94a3b8"/>
+        <rect x="32" y="7" width="4" height="1" fill="#94a3b8"/>
+        <rect x="4" y="18" width="1" height="12" fill="#94a3b8"/>
+        <rect x="43" y="18" width="1" height="12" fill="#94a3b8"/>
+        <rect x="18" y="43" width="12" height="1" fill="#94a3b8"/>
+
+        <!-- Inner Lip Shadow Ring -->
+        <rect x="16" y="7" width="16" height="2" fill="#12151a"/>
+        <rect x="12" y="9" width="4" height="2" fill="#12151a"/>
+        <rect x="32" y="9" width="4" height="2" fill="#12151a"/>
+        <rect x="9" y="11" width="3" height="5" fill="#12151a"/>
+        <rect x="36" y="11" width="3" height="5" fill="#12151a"/>
+        <rect x="7" y="16" width="2" height="16" fill="#12151a"/>
+        <rect x="39" y="16" width="2" height="16" fill="#12151a"/>
+        <rect x="9" y="32" width="3" height="5" fill="#12151a"/>
+        <rect x="36" y="32" width="3" height="5" fill="#12151a"/>
+        <rect x="12" y="37" width="4" height="2" fill="#12151a"/>
+        <rect x="32" y="37" width="4" height="2" fill="#12151a"/>
+        <rect x="16" y="39" width="16" height="2" fill="#12151a"/>
+
+        <!-- 5-Spoke Advan Racing TC-4 Architecture -->
+        <!-- Spoke 1 (Top 12 o'clock) -->
+        <rect x="22" y="6" width="4" height="12" fill="#1f242b"/>
+        <rect x="23" y="7" width="2" height="10" fill="#64748b"/>
+        <rect x="23" y="7" width="2" height="3" fill="#e2e8f0"/>
+
+        <!-- Spoke 2 (Right-Upper 2 o'clock with TC-4 accent) -->
+        <rect x="29" y="18" width="12" height="4" fill="#1f242b"/>
+        <rect x="30" y="19" width="10" height="2" fill="#64748b"/>
+        <rect x="35" y="19" width="4" height="2" fill="#f8fafc"/>
+
+        <!-- Spoke 3 (Bottom-Right 5 o'clock) -->
+        <rect x="27" y="28" width="4" height="5" fill="#1f242b"/>
+        <rect x="29" y="32" width="4" height="5" fill="#1f242b"/>
+        <rect x="31" y="36" width="4" height="4" fill="#1f242b"/>
+        <rect x="28" y="29" width="2" height="4" fill="#64748b"/>
+        <rect x="30" y="33" width="2" height="4" fill="#94a3b8"/>
+        <rect x="32" y="37" width="2" height="2" fill="#e2e8f0"/>
+
+        <!-- Spoke 4 (Bottom-Left 7 o'clock) -->
+        <rect x="17" y="28" width="4" height="5" fill="#1f242b"/>
+        <rect x="15" y="32" width="4" height="5" fill="#1f242b"/>
+        <rect x="13" y="36" width="4" height="4" fill="#1f242b"/>
+        <rect x="18" y="29" width="2" height="4" fill="#64748b"/>
+        <rect x="16" y="33" width="2" height="4" fill="#94a3b8"/>
+        <rect x="14" y="37" width="2" height="2" fill="#e2e8f0"/>
+
+        <!-- Spoke 5 (Left-Upper 10 o'clock) -->
+        <rect x="7" y="18" width="12" height="4" fill="#1f242b"/>
+        <rect x="8" y="19" width="10" height="2" fill="#64748b"/>
+        <rect x="9" y="19" width="3" height="2" fill="#e2e8f0"/>
+
+        <!-- Center Hub & 4 Lug Nuts -->
+        <rect x="19" y="17" width="10" height="14" fill="#181b20"/>
+        <rect x="17" y="19" width="14" height="10" fill="#181b20"/>
+        <rect x="20" y="18" width="8" height="12" fill="#333942"/>
+        <rect x="18" y="20" width="12" height="8" fill="#333942"/>
+        <!-- 4 Lug Nuts -->
+        <rect x="23" y="18" width="2" height="2" fill="#0d0f12"/>
+        <rect x="23" y="28" width="2" height="2" fill="#0d0f12"/>
+        <rect x="18" y="23" width="2" height="2" fill="#94a3b8"/>
+        <rect x="28" y="23" width="2" height="2" fill="#0d0f12"/>
+        <!-- Center Cap -->
+        <rect x="21" y="21" width="6" height="6" fill="#0d0f12"/>
+        <rect x="22" y="22" width="4" height="4" fill="#94a3b8"/>
+        <rect x="23" y="23" width="3" height="1" fill="#eb0a1e"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Top Fixed Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-md border-b border-surface-container shadow-[0_1px_8px_rgba(0,0,0,0.03)]">
+    <div class="h-20 w-full px-margin-mobile md:px-margin-tablet lg:px-margin max-w-[1440px] mx-auto flex items-center justify-between gap-gutter">
+      <div class="flex items-center gap-space-md">
+        <img alt="ZR Monogram Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDDACbEgEsnG32qGrQsFt3QJXjYyXb-XGFfjDDmPrCe7PEtEY6wWVZxa3PNsheSUIB0QzPb-4smP4lWDTxccTy-pcQYQxxPHAvlnRS9RnmgNkTYyHLUW0LZx7O-i3ClWahjbkS9-JPYxGZX-jK9SWBeE6M2H1YE3E8i_i6BDnKjTQM7KAN2G6WNVGflaioEQkVS7LaX_rVtdmfmhLMCyCH0q0zcXPkfOmj7o-bC9sRH8g">
+        <div class="flex flex-col">
+          <span class="font-label-technical text-label-technical tracking-wider text-on-surface font-semibold">ZAKKI RAMADHAN</span>
+          <span class="font-label-code text-label-code text-secondary tracking-widest uppercase">DKV PORTFOLIO // IND</span>
+        </div>
+      </div>
+      <nav class="hidden lg:flex items-center gap-gutter" data-active-classes="text-primary font-semibold">
+        <a aria-current="page" class="tracking-widest transition-colors py-space-xs uppercase text-primary font-semibold" data-path="projects" href="#projects">Projects</a>
+        <a class="font-label-technical text-label-technical tracking-widest text-secondary hover:text-on-surface transition-colors py-space-xs uppercase" data-path="about" href="#profile">About</a>
+        <a class="font-label-technical text-label-technical tracking-widest text-secondary hover:text-on-surface transition-colors py-space-xs uppercase" data-path="experience" href="#experience">Experience</a>
+        <a class="font-label-technical text-label-technical tracking-widest text-secondary hover:text-on-surface transition-colors py-space-xs uppercase" data-path="skills" href="#capabilities">Skills</a>
+        <a class="font-label-technical text-label-technical tracking-widest text-secondary hover:text-on-surface transition-colors py-space-xs uppercase" data-path="education" href="#capabilities">Education</a>
+      </nav>
+      <div class="flex items-center gap-space-md">
+        <a class="hidden sm:inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-full border border-primary text-primary hover:bg-primary hover:text-on-primary transition-all duration-200 font-label-technical text-label-technical tracking-wider uppercase group" data-path="contact" href="#contact">
+          <span class="group-hover:translate-x-0.5 transition-transform">Contact Me</span>
+          <span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+        </a>
+        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm">
+          <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="w-full pt-20 bg-surface-bright min-h-screen">
+    <div class="flex flex-col w-full text-on-surface">
+
+      <!-- ========================================== -->
+      <!-- 01. FULL-BLEED EDGE-TO-EDGE HERO SHOWCASE  -->
+      <!-- ========================================== -->
+      <section class="relative w-full h-[640px] md:h-[680px] bg-inverse-surface overflow-hidden group/hero select-none" id="hero-slider-section">
+        <!-- Top Crimson Velocity Accent Strip -->
+        <div class="absolute top-0 left-0 right-0 h-1 bg-primary-container z-30"></div>
+
+        <!-- Slides Stack -->
+        <div class="relative w-full h-full" id="hero-slides-viewport">
+          <!-- SLIDE 01: Bumbu Pecel Warung 187 -->
+          <div class="hero-slide absolute inset-0 w-full h-full transition-all duration-700 ease-in-out opacity-0 pointer-events-none z-0" data-cat="BRAND IDENTITY // 2025" data-headline="BUMBU PECEL WARUNG 187" data-index="0" data-software="CORELDRAW // ADOBE ILLUSTRATOR" data-sub="Culinary brand identity, packaging system, and hand-drawn heritage illustration.">
+            <img alt="Bumbu Pecel Warung 187 Showcase" class="w-full h-full object-cover object-center scale-100 group-hover/hero:scale-105 transition-transform duration-1000 ease-out pointer-events-none" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT90Zu36XMX5pVRPTcaZ9VeH80-B_utST3IzAV5FMKmh1s87eDmcb3F_smwEUk2YrCCOZslOlRpqfE9GXW3A2uSp1VYL36VC03rfI43k0hkCZ2veYKWfA3QE-cH6CSHCVFbmCbd044ureC7w4jF0CN6at_BFzg2P9T8usWan7_u9fEjYBN6r8mtfVgXyTwbIqstfxYBwXvKzIwpJbXzqfyb1QC0bQeLF8LyoGVOgVEpu4xZvY5FjR40g">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent"></div>
+          </div>
+
+          <!-- SLIDE 02: Mecha Robotic Hand 3D -->
+          <div class="hero-slide absolute inset-0 w-full h-full transition-all duration-700 ease-in-out opacity-100 pointer-events-auto z-10" data-cat="HARD-SURFACE 3D // 2025" data-headline="MECHA ROBOTIC HAND 3D" data-index="1" data-software="BLENDER 3D // CYCLES ENGINE" data-sub="Intricate cybernetic joint modeling, PBR metallic roughness, and studio lighting setup.">
+            <img alt="Mecha Robotic Hand 3D Model" class="w-full h-full object-cover object-center scale-100 group-hover/hero:scale-105 transition-transform duration-1000 ease-out pointer-events-none" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLuBFIr-gOt_e3MoixsrhfMqA01l2wYdBHfGY0Li-RxJQLuqRE4utFIQhGy0AiTTfBu_9zRSjvXsOYT2-gieK4uFyghMMlQpI7qEhOeCEKy8uZqYfCgirioYNOAN_39TUxmJo5PKj26eaPwf-gUQ22FuuarWHf_xVjpquRzUrRX0-RT8SlAvojR5NaVcVtuUfxqp6d7QYOmTH8g3HKEUnqfk2Z7P2hHabt6QjQkITRo2a7zKtzicy3EA">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent"></div>
+          </div>
+
+          <!-- SLIDE 03: Glitch Typography Effect -->
+          <div class="hero-slide absolute inset-0 w-full h-full transition-all duration-700 ease-in-out opacity-0 pointer-events-none z-0" data-cat="MOTION &amp; VFX // 2024" data-headline="FRACTURED REALITY: GLITCH TYPOGRAPHY" data-index="2" data-software="ADOBE AFTER EFFECTS" data-sub="Kinetic visual effects title broadcast design with RGB split and chromatic aberration.">
+            <img alt="Glitch Typography Motion Graphics" class="w-full h-full object-cover object-center scale-100 group-hover/hero:scale-105 transition-transform duration-1000 ease-out pointer-events-none" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3WL0DooJKuYx9zUcdQlUJPyHfo32SIJU3_H8V0w5PPz-ijhlrzLSGQXhX9DTNdM893KqtZGVQtrHJ6J0utYZx3oAuPOf4c2qegTExTEritJOdhaFghdaAuNMZ4XfnVPz_t-WIo89IXhcBhHzW7pC4i1qGxweuzmFWcXdcJJ9nHGdkb_iftmNa5QHqtSMlf9B5pRWgGZmGv1PEevO9IIkXwfoEPRf-pe90PbDgBu7Nu4ALr2VHQpTA-w">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent"></div>
+          </div>
+
+          <!-- SLIDE 04: MPK 26/27 SMKN 10 Surabaya -->
+          <div class="hero-slide absolute inset-0 w-full h-full transition-all duration-700 ease-in-out opacity-0 pointer-events-none z-0" data-cat="ORGANIZATION EMBLEM // 2024" data-headline="MPK 26/27 SMKN 10 SURABAYA" data-index="3" data-software="ILLUSTRATOR // PHOTOSHOP" data-sub="Official student council emblem, sharp collegiate geometry, and institutional stationery branding.">
+            <img alt="MPK SMKN 10 Surabaya Emblem Design" class="w-full h-full object-cover object-center scale-100 group-hover/hero:scale-105 transition-transform duration-1000 ease-out pointer-events-none" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWUroL4SzGpY0ezufyGh0K1S9q5SHNZB0cor67FrP06oXP3IlksaX7-WrtUZBI-xxhHW1mSG6PAPlinZi5aEd3-wuB3G4uF6dM4tvXk3eSbnr52K-NILOrCUf4QTHjkeFZyBTAHsri7tj8C4EYo3fjtJ8pXCjZTuicO6zVAaiuFbaTNV_np9YQfjAbhPZfDpFUzJkA5zVsFdSlK53AuSv0eHlEbQ9bzsFylxcw3UL9RBG9dCjAwcB9ew">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent"></div>
+          </div>
+
+          <!-- SLIDE 05: Butterfly Motif Nirmana -->
+          <div class="hero-slide absolute inset-0 w-full h-full transition-all duration-700 ease-in-out opacity-0 pointer-events-none z-0" data-cat="BASIC DESIGN &amp; NIRMANA // 2024" data-headline="OPTICAL BUTTERFLY NIRMANA" data-index="4" data-software="MANUAL INK // FINE LINER // NIRMANA" data-sub="High-precision black-and-white ink stippling, geometric symmetry, and visual rhythm composition.">
+            <img alt="Butterfly Motif Nirmana Ink Art" class="w-full h-full object-cover object-center scale-100 group-hover/hero:scale-105 transition-transform duration-1000 ease-out pointer-events-none" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9Oj-IlVDfL8UpqYpo1wZLjY8143CL23leRR7pKMFLM32RpP468FaV7x0RL6BMoz0UrhDtTpTsFt3V4N7zh51D72qA6UHcpkT9EvKaA2d2YNAHp2nufvh5B-W9jSrjnn1ycODuwtEVw4BBmMru16_YlSgaii9czvSkfNgz4TnBUM0S2jaQYZytISSYBWF2yvIfqTMTjyOAKEsExjXt57si48gjqTuKng-ExR-iVF31ZxNfCHxAc11xyA">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-transparent"></div>
+          </div>
+        </div>
+
+        <!-- Hero In-Frame Overlays (Top Telemetry Status Bar) -->
+        <div class="absolute top-6 left-0 right-0 z-20 pointer-events-none">
+          <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin flex items-center justify-between">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-white shadow-lg pointer-events-auto">
+              <span class="w-2 h-2 rounded-full bg-[#EB0A1E] animate-pulse"></span>
+              <span class="font-label-technical text-label-technical uppercase tracking-widest text-white/90 font-bold">
+                FLAGSHIP SHOWCASE // PORTFOLIO 2026
+              </span>
+            </div>
+            <div class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-white/80 font-label-code text-label-code uppercase tracking-wider">
+              <span class="text-white/60">STATUS:</span>
+              <span class="text-emerald-400 font-bold">PRODUCTION READY</span>
+              <span class="text-white/40">//</span>
+              <span>SURABAYA, ID</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Hero Content Grid -->
+        <div class="absolute bottom-10 left-0 right-0 z-20 pointer-events-none">
+          <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+            <div class="max-w-2xl text-white pointer-events-auto">
+              <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded bg-[#EB0A1E] text-white font-label-technical text-label-technical font-bold uppercase tracking-wider mb-2 shadow" id="hero-live-cat">HARD-SURFACE 3D // 2025</div>
+              <h1 class="font-display-hero text-3xl sm:text-4xl md:text-5xl font-extrabold uppercase tracking-tight text-white leading-tight drop-shadow-md" id="hero-live-headline">MECHA ROBOTIC HAND 3D</h1>
+              <p class="font-body-md text-white/80 mt-2 max-w-xl line-clamp-2 drop-shadow" id="hero-live-sub">Intricate cybernetic joint modeling, PBR metallic roughness, and studio lighting setup.</p>
+              <div class="flex items-center gap-space-md mt-4">
+                <a class="inline-flex items-center gap-space-xs px-space-lg py-space-sm bg-[#EB0A1E] text-white font-label-technical text-label-technical uppercase font-bold tracking-wider rounded-lg shadow-lg hover:bg-red-700 transition-all" href="#projects">
+                  <span>EXPLORE SELECTED SPEC</span>
+                  <span class="material-symbols-outlined text-[18px]">south_east</span>
+                </a>
+                <a class="hidden sm:inline-flex items-center gap-space-xs px-space-md py-space-sm bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/20 font-label-technical text-label-technical uppercase font-semibold tracking-wider rounded-lg transition-all" href="#capabilities">
+                  <span>SYSTEM SPECS</span>
+                  <span class="material-symbols-outlined text-[18px]">tune</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="flex flex-col items-start md:items-end gap-2 text-white pointer-events-auto">
+              <div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-black/60 backdrop-blur-md border border-white/10">
+                <span class="font-label-code text-label-code text-white/60 uppercase">SOFTWARE //</span>
+                <span class="font-label-technical text-label-technical text-white font-bold uppercase tracking-wider" id="hero-live-software">BLENDER 3D // CYCLES ENGINE</span>
+              </div>
+              <div class="flex items-center gap-2 font-label-code text-white/90">
+                <span class="text-[#EB0A1E] text-2xl font-bold font-display-hero leading-none" id="hero-live-counter-current">02</span>
+                <span class="text-white/40 text-lg">/</span>
+                <span class="text-white/60 text-lg">05</span>
+                <span class="ml-2 text-xs uppercase tracking-widest text-white/50">MOHAMMAD ZAKKI RAMADHAN</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pinned Side Navigation Buttons -->
+        <button aria-label="Previous Slide" class="absolute left-4 md:left-6 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-black/60 hover:bg-[#EB0A1E] text-white/90 hover:text-white backdrop-blur-md border border-white/15 flex items-center justify-center transition-all duration-200 shadow-xl hover:scale-105 focus:outline-none" id="hero-nav-prev" onclick="heroPrev(); resetHeroAutoplay();">
+          <span class="material-symbols-outlined text-[24px]">chevron_left</span>
+        </button>
+        <button aria-label="Next Slide" class="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-black/60 hover:bg-[#EB0A1E] text-white/90 hover:text-white backdrop-blur-md border border-white/15 flex items-center justify-center transition-all duration-200 shadow-xl hover:scale-105 focus:outline-none" id="hero-nav-next" onclick="heroNext(); resetHeroAutoplay();">
+          <span class="material-symbols-outlined text-[24px]">chevron_right</span>
+        </button>
+
+        <!-- Bottom Centered Pagination Indicator Dots -->
+        <div class="absolute bottom-4 left-0 right-0 z-30 flex items-center justify-center gap-2" id="hero-pips">
+          <button aria-label="Slide 1" class="h-1.5 w-2 rounded-full bg-white/40 hover:bg-white/80 transition-all duration-300" onclick="heroGoTo(0)"></button>
+          <button aria-label="Slide 2" class="h-1.5 w-7 rounded-full bg-[#EB0A1E] transition-all duration-300" onclick="heroGoTo(1)"></button>
+          <button aria-label="Slide 3" class="h-1.5 w-2 rounded-full bg-white/40 hover:bg-white/80 transition-all duration-300" onclick="heroGoTo(2)"></button>
+          <button aria-label="Slide 4" class="h-1.5 w-2 rounded-full bg-white/40 hover:bg-white/80 transition-all duration-300" onclick="heroGoTo(3)"></button>
+          <button aria-label="Slide 5" class="h-1.5 w-2 rounded-full bg-white/40 hover:bg-white/80 transition-all duration-300" onclick="heroGoTo(4)"></button>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- 02. PROFILE & DISCIPLINE (3-COLUMN MATRIX) -->
+      <!-- ========================================== -->
+      <section class="w-full bg-surface-container-lowest py-space-xl" id="profile">
+        <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+          <div class="flex flex-col mb-space-lg">
+            <div class="flex items-center gap-space-sm">
+              <span class="font-label-technical text-label-technical text-primary-container tracking-widest uppercase font-bold">
+                01 // PROFILE &amp; DISCIPLINE
+              </span>
+              <div class="h-0.5 w-12 bg-primary-container"></div>
+            </div>
+            <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight uppercase mt-space-xs">
+              PRECISION IDENTITY ARCHITECTURE
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+            <!-- COLUMN 1: Portrait & Floating CV Card -->
+            <div class="lg:col-span-4 flex flex-col gap-space-md">
+              <div class="relative rounded-2xl overflow-hidden bg-surface-container-low shadow-sm border border-neutral-200 group">
+                <div class="aspect-[3/4] w-full overflow-hidden bg-surface-container">
+                  <img alt="Mohammad Zakki Ramadhan Studio Portrait" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCos-OOASfK70RQSO56Zw7c0UesU7xLNEj5JG9FdLsMYQPDhcnnFWzVARD7jhIfmZ5QpAUffqMCCTLEOLeODPpEHPBBqpinEWb4yiQs2Bgz_jfyin636NiPjdffXuWz0geIZX7TmGWKsAUb62LW5xseMcA7IK4HYm7TauVpT37C-_gNIYK-XQEkqXnUOu6PCrxNGNABDGk7vlytC3YOoQgl8m31t5zIOGSH9x1611D8i4UHzpy7pgspag">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-transparent to-transparent pointer-events-none"></div>
+                <div class="absolute bottom-3 left-3 right-3 p-3 rounded-xl bg-inverse-surface/85 backdrop-blur-md border border-white/10 text-inverse-on-surface">
+                  <div class="flex items-center justify-between">
+                    <div class="flex flex-col">
+                      <span class="font-label-technical text-label-technical text-white font-bold tracking-wider uppercase">
+                        MOHAMMAD ZAKKI RAMADHAN
+                      </span>
+                      <span class="font-label-code text-label-code text-primary-fixed uppercase tracking-wider">
+                        DKV XII-1 • SMKN 10 SURABAYA
+                      </span>
+                    </div>
+                    <div class="w-7 h-7 rounded-full bg-[#EB0A1E] text-white flex items-center justify-center shadow">
+                      <span class="material-symbols-outlined text-[16px]">verified</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-space-md bg-surface-container-low rounded-xl border border-neutral-200 flex items-center justify-between gap-space-sm shadow-sm">
+                <div class="flex items-center gap-space-sm">
+                  <div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary-container">
+                    <span class="material-symbols-outlined text-[24px]">description</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="font-title-md text-title-md font-bold text-on-surface leading-tight">VIEW &amp; DOWNLOAD CV</span>
+                    <span class="font-label-code text-label-code text-secondary tracking-widest">DOC // SPEC.PDF (4.8 MB)</span>
+                  </div>
+                </div>
+                <a class="inline-flex items-center gap-space-xs px-space-md py-space-xs bg-primary-container text-on-primary rounded font-label-technical text-label-technical tracking-wider uppercase shadow hover:opacity-90 transition-opacity" href="#" onclick="alert('Downloading CV Specification Packet: Mohammad_Zakki_Ramadhan_CV.pdf'); return false;">
+                  <span>DOWNLOAD</span>
+                  <span class="material-symbols-outlined text-[16px]">download</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- COLUMN 2: Biographical Manifest & Metrics -->
+            <div class="lg:col-span-5 flex flex-col gap-space-md">
+              <div class="bg-surface-container-low p-space-lg rounded-2xl border border-neutral-200 space-y-space-md">
+                <div class="flex items-center gap-space-xs text-secondary font-label-code text-label-code uppercase tracking-widest">
+                  <span class="material-symbols-outlined text-[16px] text-primary-container">terminal</span>
+                  <span>BIOGRAPHICAL MANIFEST // SMKN 10 SURABAYA</span>
+                </div>
+                <p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+                  I am <span class="font-bold text-on-surface">Mohammad Zakki Ramadhan</span>, a Class XII-1 Visual Communication Design (DKV) student at SMKN 10 Surabaya. I bring proven hands-on experience across graphic design, social media content creation, commercial studio photography, and motion/3D visual development.
+                </p>
+                <p class="font-body-md text-body-md text-secondary leading-relaxed">
+                  <span style="letter-spacing: -0.005em;">Taking strategic inspiration from professional Design Communication Visual (DKV) studios, visual identity requires intentional typography, carefully calibrated margins, disciplined grid architecture, and a balance between aesthetic appeal, structural precision, and effective visual communication.</span>
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-space-xs">
+                  <div class="p-space-md bg-surface-container-lowest rounded-lg border border-neutral-200">
+                    <div class="flex items-center gap-space-xs text-primary-container mb-space-xs">
+                      <span class="material-symbols-outlined text-[20px]">layers</span>
+                      <span class="font-label-technical text-label-technical uppercase font-bold">Systems Design</span>
+                    </div>
+                    <p class="font-body-sm text-body-sm text-secondary">
+                      Scalable brand standards, rigid typographic grids, and modular packaging collateral built for enterprise reproduction.
+                    </p>
+                  </div>
+                  <div class="p-space-md bg-surface-container-lowest rounded-lg border border-neutral-200">
+                    <div class="flex items-center gap-space-xs text-primary-container mb-space-xs">
+                      <span class="material-symbols-outlined text-[20px]">camera</span>
+                      <span class="font-label-technical text-label-technical uppercase font-bold">Studio Lighting</span>
+                    </div>
+                    <p class="font-body-sm text-body-sm text-secondary">
+                      High-key commercial setup, calibrated strobe lighting, precision color balancing, and micro-skin retouching.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-3 gap-space-md pt-space-xs bg-surface-container-lowest p-space-md rounded-xl border border-neutral-200">
+                  <div class="flex flex-col">
+                    <span class="font-display-hero-mobile text-headline-md font-bold text-on-surface">02+</span>
+                    <span class="font-label-code text-label-code uppercase tracking-widest text-secondary mt-0.5">YRS PRACTICE</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="font-display-hero-mobile text-headline-md font-bold text-primary-container">15+</span>
+                    <span class="font-label-code text-label-code uppercase tracking-widest text-secondary mt-0.5">BRAND ASSETS</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="font-display-hero-mobile text-headline-md font-bold text-on-surface">WIB</span>
+                    <span class="font-label-code text-label-code uppercase tracking-widest text-secondary mt-0.5">SURABAYA / ID</span>
+                  </div>
+                </div>
+
+                <div class="pt-space-xs">
+                  <a class="inline-flex items-center justify-center gap-space-sm w-full py-space-sm bg-primary-container text-on-primary font-headline-sm text-title-md uppercase tracking-wider rounded-lg shadow hover:opacity-90 transition-all" href="#" onclick="alert('Accessing Zakki Ramadhan Master Dossier.'); return false;">
+                    <span>VIEW COMPLETE DOSSIER &amp; CV</span>
+                    <span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- COLUMN 3: Direct Telemetry & Connect Module -->
+            <div class="lg:col-span-3 flex flex-col gap-space-md" id="contact">
+              <div class="bg-surface-container-low p-space-lg rounded-2xl border border-neutral-200">
+                <div class="flex items-center justify-between pb-space-sm mb-space-md border-b border-surface-container">
+                  <span class="font-label-technical text-label-technical uppercase tracking-widest text-on-surface font-bold">
+                    DIRECT COMM CHANNELS
+                  </span>
+                  <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-lowest font-label-code text-label-code text-primary-container font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+                    ACTIVE
+                  </span>
+                </div>
+
+                <div class="space-y-space-sm">
+                  <div class="p-space-sm bg-surface-container-lowest rounded-lg border border-neutral-200 flex items-center justify-between group">
+                    <div class="flex items-center gap-space-sm">
+                      <div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-on-surface">
+                        <span class="material-symbols-outlined text-[18px]">alternate_email</span>
+                      </div>
+                      <div class="flex flex-col">
+                        <span class="font-label-code text-label-code text-secondary uppercase">DIRECT EMAIL</span>
+                        <span class="font-body-sm text-body-sm font-semibold text-on-surface truncate max-w-[150px]">zakkiramadhan01@gmail.com</span>
+                      </div>
+                    </div>
+                    <button class="p-space-xs text-secondary hover:text-primary-container transition-colors" onclick="navigator.clipboard.writeText('zakkiramadhan01@gmail.com'); alert('Copied zakkiramadhan01@gmail.com to clipboard');" title="Copy Email">
+                      <span class="material-symbols-outlined text-[18px]">content_copy</span>
+                    </button>
+                  </div>
+
+                  <div class="p-space-sm bg-surface-container-lowest rounded-lg border border-neutral-200 flex items-center justify-between group">
+                    <div class="flex items-center gap-space-sm">
+                      <div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-on-surface">
+                        <span class="material-symbols-outlined text-[18px]">photo_camera</span>
+                      </div>
+                      <div class="flex flex-col">
+                        <span class="font-label-code text-label-code text-secondary uppercase">INSTAGRAM</span>
+                        <span class="font-body-sm text-body-sm font-semibold text-on-surface">@zkkirmd</span>
+                      </div>
+                    </div>
+                    <a class="p-space-xs text-secondary hover:text-primary-container transition-colors" href="https://instagram.com" rel="noopener noreferrer" target="_blank">
+                      <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+                    </a>
+                  </div>
+
+                  <div class="p-space-sm bg-surface-container-lowest rounded-lg border border-neutral-200 flex items-center justify-between group">
+                    <div class="flex items-center gap-space-sm">
+                      <div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-on-surface">
+                        <span class="material-symbols-outlined text-[18px]">chat</span>
+                      </div>
+                      <div class="flex flex-col">
+                        <span class="font-label-code text-label-code text-secondary uppercase">SECURE CHAT // WA</span>
+                        <span class="font-body-sm text-body-sm font-semibold text-on-surface">+62 851-5743-6550</span>
+                      </div>
+                    </div>
+                    <span class="font-label-code text-label-code text-outline uppercase px-2 py-0.5 bg-surface-container rounded">
+                      FAST
+                    </span>
+                  </div>
+
+                  <div class="p-space-sm bg-surface-container-lowest rounded-lg border border-neutral-200 flex items-center gap-space-sm">
+                    <div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-on-surface">
+                      <span class="material-symbols-outlined text-[18px]">pin_drop</span>
+                    </div>
+                    <div class="flex flex-col">
+                      <span class="font-label-code text-label-code text-secondary uppercase">BASE OF OPERATIONS</span>
+                      <span class="font-body-sm text-body-sm font-semibold text-on-surface">Surabaya, East Java, Indonesia</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-space-md p-space-md bg-inverse-surface text-inverse-on-surface rounded-xl">
+                  <div class="flex items-center gap-space-xs mb-1">
+                    <span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                    <span class="font-label-technical text-label-technical uppercase tracking-widest text-surface-container">COMMISSION PROTOCOL</span>
+                  </div>
+                  <p class="font-body-sm text-body-sm text-surface-variant">
+                    Actively seeking strategic visual communication commissions, brand identity systems, and post-secondary design apprenticeships.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- 03. INTERNSHIP TRACK RECORD ("02 // EXP")  -->
+      <!-- ========================================== -->
+      <section class="w-full bg-surface-container-low py-space-xl" id="experience">
+        <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
+            <div class="flex flex-col">
+              <div class="flex items-center gap-space-sm">
+                <span class="font-label-technical text-label-technical text-primary-container tracking-widest uppercase font-bold">
+                  02 // EXPERIENCE
+                </span>
+                <div class="h-0.5 w-12 bg-primary-container"></div>
+              </div>
+              <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight uppercase mt-space-xs">
+                PRACTICAL INDUSTRY TRACK RECORD
+              </h2>
+              <p class="font-body-md text-body-md text-secondary mt-1 max-w-xl">
+                Verified apprenticeships and industrial workplace integration spanning higher-education academic branding and commercial studio environments.
+              </p>
+            </div>
+
+            <div class="inline-flex p-1 bg-surface-container-highest rounded-lg self-start md:self-auto">
+              <button class="px-space-md py-1.5 font-label-technical text-label-technical uppercase tracking-wider bg-surface-container-lowest text-primary-container font-bold rounded shadow-sm" id="tab-all" onclick="filterExp('all')">
+                ALL TRIM LEVELS (2)
+              </button>
+              <button class="px-space-md py-1.5 font-label-technical text-label-technical uppercase tracking-wider text-secondary hover:text-on-surface rounded" id="tab-its" onclick="filterExp('its')">
+                ITS SURABAYA
+              </button>
+              <button class="px-space-md py-1.5 font-label-technical text-label-technical uppercase tracking-wider text-secondary hover:text-on-surface rounded" id="tab-april" onclick="filterExp('april')">
+                APRIL STUDIO
+              </button>
+            </div>
+          </div>
+
+          <div class="space-y-space-lg">
+            <!-- Experience Card 01: ITS Surabaya -->
+            <div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm border border-neutral-200 hover:shadow-md transition-all" id="exp-its">
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+                <div class="lg:col-span-7 flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-center gap-space-sm mb-space-xs">
+                      <span class="font-label-code text-label-code text-primary-container tracking-widest uppercase font-bold">
+                        SPEC // TRACK-01
+                      </span>
+                      <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                      <span class="font-label-code text-label-code text-secondary tracking-widest uppercase">
+                        JUL 2024 — DEC 2024
+                      </span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight uppercase">
+                      Departemen Teknik Kimia ITS
+                    </h3>
+                    <div class="font-title-md text-title-md text-primary-container font-semibold mt-1">
+                      Content Creator &amp; Social Media Graphic Designer
+                    </div>
+                    <div class="font-label-technical text-label-technical text-secondary mt-0.5">
+                      Surabaya, Indonesia • On-Site Apprenticeship
+                    </div>
+                    <div class="mt-space-md space-y-space-xs">
+                      <span class="font-label-code text-label-code uppercase tracking-wider text-secondary">
+                        OPERATIONAL DELIVERABLES:
+                      </span>
+                      <ul class="space-y-1.5 font-body-sm text-body-sm text-on-surface">
+                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-primary-container mt-0.5">check_circle</span><span>Social media graphic design and carousel architecture for academic programs.</span></li>
+                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-primary-container mt-0.5">check_circle</span><span>Official Islamic holiday &amp; event greeting posters, including Ramadhan 1447 H commemorative announcements.</span></li>
+                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-primary-container mt-0.5">check_circle</span><span>Digital content creation formulating infographics aligned with ITS institutional brand guidelines.</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="pt-space-md flex flex-wrap gap-1.5">
+                    <span class="px-2 py-1 bg-surface-container font-label-code text-label-code uppercase text-on-surface rounded">CorelDRAW</span>
+                    <span class="px-2 py-1 bg-surface-container font-label-code text-label-code uppercase text-on-surface rounded">Photoshop</span>
+                    <span class="px-2 py-1 bg-surface-container font-label-code text-label-code uppercase text-on-surface rounded">Canva Pro</span>
+                    <span class="px-2 py-1 bg-surface-container font-label-code text-label-code uppercase text-on-surface rounded">CapCut</span>
+                  </div>
+                </div>
+
+                <div class="lg:col-span-5 flex flex-col justify-center">
+                  <span class="font-label-code text-label-code uppercase tracking-widest text-secondary mb-space-xs">
+                    FEATURED SPEC // 3:4 PORTRAIT FRAME
+                  </span>
+                  <div class="group relative rounded-xl overflow-hidden bg-surface-container shadow-sm aspect-[3/4] max-h-[460px] w-full mx-auto">
+                    <img alt="Departemen Teknik Kimia ITS Social Media &amp; Graphic Showcase" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZclU_lD605Eu6JcMhWUZqfz_FZ6IhPrF17wjxPLK1P1mOVSt-r1iZAa6dl7tZh5Tyv78ruOF0iTTaGqMHMCQpFdG1qOahXqc6JbJmeluRWzWEZfUJ2IO3T_22R75EID7jhkJ3y3paRpfSYiixbNHV7-Dpt5n4xslB2GCHGpm_kLSLJwaSMZDaVTEVy5r5bHDPKVqphlGU_4kaNtHYOhQENka_CbOOjMKcbqGLPzTIR1P2M0nDFWfnfA">
+                    <div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent flex items-end justify-between p-space-md">
+                      <span class="font-label-code text-label-code text-inverse-on-surface uppercase font-semibold">ASSET REPOSITORY // TEKNIK KIMIA ITS</span>
+                      <span class="font-label-code text-label-code text-primary-fixed uppercase px-2 py-0.5 bg-surface-container-highest rounded">3:4 POSTER</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Experience Card 02: April Photo Studio -->
+            <div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm border border-neutral-200 hover:shadow-md transition-all" id="exp-april">
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+                <div class="lg:col-span-7 flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-center gap-space-sm mb-space-xs">
+                      <span class="font-label-code text-label-code text-primary-container tracking-widest uppercase font-bold">
+                        SPEC // TRACK-02
+                      </span>
+                      <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                      <span class="font-label-code text-label-code text-secondary tracking-widest uppercase">
+                        JAN 2024 — JUN 2024
+                      </span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight uppercase">
+                      April Photo Studio
+                    </h3>
+                    <div class="font-title-md text-title-md text-primary-container font-semibold mt-1">
+                      Assistant Photographer &amp; Photo Editor
+                    </div>
+                    <div class="font-label-technical text-label-technical text-secondary mt-0.5">
+                      Surabaya, Indonesia • Studio Apprenticeship
+                    </div>
+                    <div class="mt-space-md space-y-space-xs">
+                      <span class="font-label-code text-label-code uppercase tracking-wider text-secondary">
+                        OPERATIONAL DELIVERABLES:
+                      </span>
+                      <ul class="space-y-1.5 font-body-sm text-body-sm text-on-surface">
+                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-primary-container mt-0.5">check_circle</span><span>Studio lighting setup &amp; comprehensive graduation and family photo session assistance.</span></li>
+                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-primary-container mt-0.5">check_circle</span><span>Professional photo retouching, non-destructive skin frequency separation, and color grading.</span></li>
+                        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-primary-container mt-0.5">check_circle</span><span>Client session support, equipment telemetry management, and studio workflow coordination.</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="pt-space-md flex flex-wrap gap-1.5">
+                    <span class="px-2 py-1 bg-surface-container font-label-code text-label-code uppercase text-on-surface rounded">Adobe Lightroom</span>
+                    <span class="px-2 py-1 bg-surface-container font-label-code text-label-code uppercase text-on-surface rounded">Adobe Photoshop</span>
+                    <span class="px-2 py-1 bg-surface-container font-label-code text-label-code uppercase text-on-surface rounded">Studio Strobe Telemetry</span>
+                    <span class="px-2 py-1 bg-surface-container font-label-code text-label-code uppercase text-on-surface rounded">Color Checker Pro</span>
+                  </div>
+                </div>
+
+                <div class="lg:col-span-5 flex flex-col justify-center">
+                  <span class="font-label-code text-label-code uppercase tracking-widest text-secondary mb-space-xs">
+                    FEATURED SPEC // 3:4 PORTRAIT FRAME
+                  </span>
+                  <div class="group relative rounded-xl overflow-hidden bg-surface-container shadow-sm aspect-[3/4] max-h-[460px] w-full mx-auto">
+                    <img alt="April Photo Studio BTS &amp; Studio Lighting Session" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmSHTmT-gqo2Ni-9f7By6u4gca0KlJrvirkciZFR4LM9nsit1FnY37rPcG1hYifq130AqLtxJo0jytV0QgUbRRuS9cqjDlDATt6_5TTZoSTA79MlQW4Sz-iI6FpX5FlqJq4kzXJXbb-AAyEh2XWYO3OxKzLn2cCHmIixyEdqG7i7oEtRc2uRPHW3Y-RT2yCZTJVzqPPTkhLlZNWG2HYABmEGEC263eUX24H50ROWqufYqUbrq9Daoaxw">
+                    <div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent flex items-end justify-between p-space-md">
+                      <span class="font-label-code text-label-code text-inverse-on-surface uppercase font-semibold">ASSET REPOSITORY // STUDIO LIGHTING &amp; BTS</span>
+                      <span class="font-label-code text-label-code text-primary-fixed uppercase px-2 py-0.5 bg-surface-container-highest rounded">3:4 POSTER</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- 04. SELECTED WORKS ("03 // PORTFOLIO")     -->
+      <!-- ========================================== -->
+      <section class="w-full bg-surface-container-low py-space-xl" id="projects">
+        <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
+            <div>
+              <div class="flex items-center gap-space-sm">
+                <span class="font-label-technical text-label-technical text-primary-container tracking-widest uppercase font-bold">
+                  03 // PORTFOLIO GALLERY
+                </span>
+                <div class="h-0.5 w-12 bg-primary-container"></div>
+              </div>
+              <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight uppercase mt-space-xs">PHOTOGRAPHY &amp; GRAPHIC DESIGN</h2>
+            </div>
+            <span class="font-label-code text-label-code text-secondary uppercase tracking-widest">CATALOG CLASSIFICATION // 06 VERIFIED WORKS</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+            <!-- SPEC 01: BRAND IDENTITY -->
+            <div class="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm border border-neutral-200 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <div class="relative w-full aspect-[16/9] overflow-hidden bg-surface-container">
+                  <img alt="Bumbu Pecel Warung 187 Branding" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBzgVdsss8Is48hE9yLuMrRsuVxrSKdgGdtNvWep9FozORhY0r1OFYDwTa5CrQ6NZEO8kn1Nywf1RvWQJ4pTo8aT10Trxyy_liuumS3j8mvNEgNC8qmNOxW7OgpWlOCvRmJOMBYeAkVv5ygAaQm-M_L1TPxUPAXTUZBrogf8BuWNI5lk4IsrWqpO__CnIfaSqlP-AUdiVDbVJ8Dc4NYg_86udViamg-eWtLPSW5oc-se5ul21R8ctpGw">
+                  <div class="absolute top-space-xs left-space-xs px-2 py-0.5 bg-surface-container-lowest/90 backdrop-blur rounded font-label-code text-label-code uppercase tracking-wider text-on-surface font-semibold">SPEC // 01</div>
+                  <div class="absolute top-space-xs right-space-xs px-2 py-0.5 bg-primary-container text-on-primary rounded font-label-technical text-label-technical uppercase tracking-wider font-semibold">BRAND IDENTITY</div>
+                </div>
+                <div class="p-space-md">
+                  <div class="font-label-code text-label-code text-secondary uppercase tracking-widest">CULINARY BRANDING // 2025</div>
+                  <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight mt-1 group-hover:text-primary-container transition-colors">Bumbu Pecel Warung 187</h3>
+                  <p class="font-body-sm text-body-sm text-secondary mt-space-xs">Client branding &amp; combination logo design featuring traditional culinary illustration, custom mortar and pestle emblem, and packaging print rollouts.</p>
+                </div>
+              </div>
+              <div class="p-space-md pt-0 flex items-center justify-between">
+                <span class="font-label-code text-label-code text-secondary uppercase">CorelDRAW • Illustrator</span>
+                <span class="w-7 h-7 rounded bg-surface-container group-hover:bg-primary-container group-hover:text-on-primary text-on-surface flex items-center justify-center transition-colors">
+                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </span>
+              </div>
+            </div>
+
+            <!-- SPEC 02: ORGANIZATION LOGO -->
+            <div class="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm border border-neutral-200 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <div class="relative w-full aspect-[16/9] overflow-hidden bg-surface-container">
+                  <img alt="MPK SMKN 10 Surabaya Emblem Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhFvBAGDtxCfdRwgfZ5DxUlPG01m-whxUkJtMMTZkN-k_FiLu7FyxUL3dp8HslOsq9xhEYZf1MjEF0Zj7M02oZL_BFUJnz-t-x8LeOShXcjRMsbqshi3shc_930gEIwMLOCsJBFO9hnyU55LX8sjFgqegySdqcL-zM_m5P8xlbfZQvdnWE4VutqdvzJg0_25RZrnZcLaDQJfm8sFlzUP9--KtJenCtLkhk6RPB1OXyD7LLAqKh9MWd1g">
+                  <div class="absolute top-space-xs left-space-xs px-2 py-0.5 bg-surface-container-lowest/90 backdrop-blur rounded font-label-code text-label-code uppercase tracking-wider text-on-surface font-semibold">SPEC // 02</div>
+                  <div class="absolute top-space-xs right-space-xs px-2 py-0.5 bg-surface-container-highest text-on-surface rounded font-label-technical text-label-technical uppercase tracking-wider font-semibold">ORGANIZATION LOGO</div>
+                </div>
+                <div class="p-space-md">
+                  <div class="font-label-code text-label-code text-secondary uppercase tracking-widest">IDENTITY ARCHITECTURE // 2024</div>
+                  <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight mt-1 group-hover:text-primary-container transition-colors">MPK 26/27 SMKN 10 Surabaya</h3>
+                  <p class="font-body-sm text-body-sm text-secondary mt-space-xs">Official emblem and typography identity for Majelis Perwakilan Kelas. Features sharp collegiate geometry, wing elements, and strict institutional council standards.</p>
+                </div>
+              </div>
+              <div class="p-space-md pt-0 flex items-center justify-between">
+                <span class="font-label-code text-label-code text-secondary uppercase">Illustrator • Photoshop</span>
+                <span class="w-7 h-7 rounded bg-surface-container group-hover:bg-primary-container group-hover:text-on-primary text-on-surface flex items-center justify-center transition-colors">
+                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </span>
+              </div>
+            </div>
+
+            <!-- SPEC 03: MOTION & VFX -->
+            <div class="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm border border-neutral-200 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <div class="relative w-full aspect-[16/9] overflow-hidden bg-inverse-surface">
+                  <img alt="Glitch Typography Motion Graphics" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHYHHQwGVZPPRGcU8SNo7ZNl2JGTYLMMMvOIyqtsWyYeNdFHbeWD7As1PjNSYSKJEhBVrhRMAThoIiwv58YbcVe6vYXqf8DVqPsCcBCYtNal7UBmHnEEz1rcKJBa_CWmJE2PyFV6YQrtB9AJyVUcOzxsYST-goLe0Oby15QRR19ZUgZwtoIqqU8V95fLg9PCdeY83X9bvhbxn8m94VxUiAq0f2Ax6IEsVfKLFztR3DlNWYoBmefNKP0g">
+                  <div class="absolute top-space-xs left-space-xs px-2 py-0.5 bg-surface-container-lowest/90 backdrop-blur rounded font-label-code text-label-code uppercase tracking-wider text-on-surface font-semibold">SPEC // 03</div>
+                  <div class="absolute top-space-xs right-space-xs px-2 py-0.5 bg-primary-container text-on-primary rounded font-label-technical text-label-technical uppercase tracking-wider font-semibold">MOTION &amp; VFX</div>
+                </div>
+                <div class="p-space-md">
+                  <div class="font-label-code text-label-code text-secondary uppercase tracking-widest">EXPERIMENTAL BROADCAST // 2024</div>
+                  <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight mt-1 group-hover:text-primary-container transition-colors">Glitch Typography Effect</h3>
+                  <p class="font-body-sm text-body-sm text-secondary mt-space-xs">Kinetic glitch title animation and visual effects coursework. Built with modular displacement maps, chromatic RGB split curves, and high-frequency digital noise raster.</p>
+                </div>
+              </div>
+              <div class="p-space-md pt-0 flex items-center justify-between">
+                <span class="font-label-code text-label-code text-secondary uppercase">Adobe After Effects</span>
+                <span class="w-7 h-7 rounded bg-surface-container group-hover:bg-primary-container group-hover:text-on-primary text-on-surface flex items-center justify-center transition-colors">
+                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </span>
+              </div>
+            </div>
+
+            <!-- SPEC 04: 3D MODELING -->
+            <div class="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm border border-neutral-200 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <div class="relative w-full aspect-[16/9] overflow-hidden bg-surface-container">
+                  <img alt="Mecha Robotic Hand 3D Model" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDQL5WlsT9TLgDw8YZr1cdpYoxXpH1bU-VXqNZ-_zZZm25YucLsGxVcUoiRFEM5UU7B8Dqmm39megh5VPJWcXegTDc2tXCUGOFdTdaECl0x5qryA0ufog7oGHUO4cPUiJ2iqBcS4I9Js_pOnvtbDd1EO8OUUeW3sLIGN5lWNnVGDQ8Pz2xhTQGjXrCUacosmz0LlA9HoNiYWXo0YC0iz4jdmJ_wFZ4VBGICGzhUjjszay8y2EK3TXk0g">
+                  <div class="absolute top-space-xs left-space-xs px-2 py-0.5 bg-surface-container-lowest/90 backdrop-blur rounded font-label-code text-label-code uppercase tracking-wider text-on-surface font-semibold">SPEC // 04</div>
+                  <div class="absolute top-space-xs right-space-xs px-2 py-0.5 bg-surface-container-highest text-on-surface rounded font-label-technical text-label-technical uppercase tracking-wider font-semibold">3D MODELING</div>
+                </div>
+                <div class="p-space-md">
+                  <div class="font-label-code text-label-code text-secondary uppercase tracking-widest">HARD-SURFACE STUDY // 2025</div>
+                  <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight mt-1 group-hover:text-primary-container transition-colors">Mecha Robotic Hand 3D</h3>
+                  <p class="font-body-sm text-body-sm text-secondary mt-space-xs">Hard-surface 3D modeling and shader rendering coursework. Features intricate mechanical joints, hydraulic pistons, PBR metal roughness, and studio lighting setup.</p>
+                </div>
+              </div>
+              <div class="p-space-md pt-0 flex items-center justify-between">
+                <span class="font-label-code text-label-code text-secondary uppercase">Blender 3D</span>
+                <span class="w-7 h-7 rounded bg-surface-container group-hover:bg-primary-container group-hover:text-on-primary text-on-surface flex items-center justify-center transition-colors">
+                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </span>
+              </div>
+            </div>
+
+            <!-- SPEC 05: BASIC DESIGN -->
+            <div class="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm border border-neutral-200 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <div class="relative w-full aspect-[16/9] overflow-hidden bg-surface-container">
+                  <img alt="Butterfly Motif Nirmana Ink Art" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvgbrH8wjZLJZ3bPcGovdfB6beNvl0_k0_M4vwvXvx3Ta4KpuvGYfUheDhEXhEH3yYzWaHfoVAlJG1r7qKJcvOqn-N9Xrn5pr8Wu1srT8cgthNmmBoIwM8SGO13YzNKa2QHmx0VhDsqtwdg9tlMrSUogmdE1-pcM9iiGerpt3IeKOLN8QUCnkqj67Ap1YcVyEgs93E_igbGD3ckkomvxXr5d8vc9TcUVcd5cjPwHdeQn3SK2KmB1r4yA">
+                  <div class="absolute top-space-xs left-space-xs px-2 py-0.5 bg-surface-container-lowest/90 backdrop-blur rounded font-label-code text-label-code uppercase tracking-wider text-on-surface font-semibold">SPEC // 05</div>
+                  <div class="absolute top-space-xs right-space-xs px-2 py-0.5 bg-surface-container-highest text-on-surface rounded font-label-technical text-label-technical uppercase tracking-wider font-semibold">BASIC DESIGN</div>
+                </div>
+                <div class="p-space-md">
+                  <div class="font-label-code text-label-code text-secondary uppercase tracking-widest">FORM &amp; RHYTHM DISCIPLINE // 2024</div>
+                  <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight mt-1 group-hover:text-primary-container transition-colors">Butterfly Motif Nirmana</h3>
+                  <p class="font-body-sm text-body-sm text-secondary mt-space-xs">Detailed black-and-white ink pattern and visual rhythm composition. Employs optical art symmetry, geometric hatching, stippling, and precise manual monochrome linework.</p>
+                </div>
+              </div>
+              <div class="p-space-md pt-0 flex items-center justify-between">
+                <span class="font-label-code text-label-code text-secondary uppercase">Manual Ink • Nirmana</span>
+                <span class="w-7 h-7 rounded bg-surface-container group-hover:bg-primary-container group-hover:text-on-primary text-on-surface flex items-center justify-center transition-colors">
+                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </span>
+              </div>
+            </div>
+
+            <!-- SPEC 06: STUDIO PHOTOGRAPHY -->
+            <div class="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm border border-neutral-200 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <div class="relative w-full aspect-[16/9] overflow-hidden bg-surface-container">
+                  <img alt="Studio Portrait &amp; Lighting Direction" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgVMMR06vzx1GUiHd63mMaGCwY-mztFC1YfQNYhUWo92cTvtVW7Q_1RsWMrgJIxF9dfO8qXzRswnyJ9w1z5kr19falRIkHMP2fINukKSfJiKi3yR0POFOAg_n69hum1wYlj8GpMcS1LzaoG0sfIylX5ptki763enUeXlgm8DbN7MDzdlRlVYOGh0nDqx4RTiTQHQkLr6FsYKlyVdoBhuI2GWklp8lBvYFVpltg3yu1JQkLEpnX6y8JMw">
+                  <div class="absolute top-space-xs left-space-xs px-2 py-0.5 bg-surface-container-lowest/90 backdrop-blur rounded font-label-code text-label-code uppercase tracking-wider text-on-surface font-semibold">SPEC // 06</div>
+                  <div class="absolute top-space-xs right-space-xs px-2 py-0.5 bg-primary-container text-on-primary rounded font-label-technical text-label-technical uppercase tracking-wider font-semibold">STUDIO PHOTOGRAPHY</div>
+                </div>
+                <div class="p-space-md">
+                  <div class="font-label-code text-label-code text-secondary uppercase tracking-widest">COMMERCIAL PORTRAITURE // 2026</div>
+                  <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight mt-1 group-hover:text-primary-container transition-colors">Studio Portrait &amp; Lighting Direction</h3>
+                  <p class="font-body-sm text-body-sm text-secondary mt-space-xs">Professional studio portraiture, softbox key-light setup, precision color grading, and commercial retouching executed during industrial apprenticeship at April Photo Studio.</p>
+                </div>
+              </div>
+              <div class="p-space-md pt-0 flex items-center justify-between">
+                <span class="font-label-code text-label-code text-secondary uppercase">Adobe Lightroom • Photoshop</span>
+                <span class="w-7 h-7 rounded bg-surface-container group-hover:bg-primary-container group-hover:text-on-primary text-on-surface flex items-center justify-center transition-colors">
+                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- 05. TECHNICAL SPECS & EDUCATION            -->
+      <!-- ========================================== -->
+      <section class="w-full bg-surface-container-lowest py-space-xl" id="capabilities">
+        <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+          <div class="flex flex-col mb-space-lg">
+            <div class="flex items-center gap-space-sm">
+              <span class="font-label-technical text-label-technical text-primary-container tracking-widest uppercase font-bold">
+                04 // CAPABILITIES &amp; TELEMETRY
+              </span>
+              <div class="h-0.5 w-12 bg-primary-container"></div>
+            </div>
+            <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight uppercase mt-space-xs">
+              TECHNICAL SPECIFICATION SHEET
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+            <div class="lg:col-span-6 bg-surface-container-low p-space-lg rounded-2xl border border-neutral-200">
+              <div class="flex items-center justify-between mb-space-md">
+                <span class="font-label-technical text-label-technical uppercase tracking-wider text-on-surface font-bold">
+                  ENGINEERING SOFTWARE STACK
+                </span>
+                <span class="font-label-code text-label-code text-primary-container uppercase">
+                  CALIBRATED v2026
+                </span>
+              </div>
+              <div class="space-y-space-md">
+                <div class="space-y-1">
+                  <div class="flex items-center justify-between font-label-technical text-label-technical">
+                    <span class="text-on-surface font-semibold">CorelDRAW Suite</span>
+                    <span class="text-secondary font-label-code">ADVANCED // 92%</span>
+                  </div>
+                  <div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+                    <div class="h-full bg-primary-container rounded-full" style="width: 92%;"></div>
+                  </div>
+                </div>
+                <div class="space-y-1">
+                  <div class="flex items-center justify-between font-label-technical text-label-technical">
+                    <span class="text-on-surface font-semibold">Adobe Illustrator</span>
+                    <span class="text-secondary font-label-code">ADVANCED // 90%</span>
+                  </div>
+                  <div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+                    <div class="h-full bg-primary-container rounded-full" style="width: 90%;"></div>
+                  </div>
+                </div>
+                <div class="space-y-1">
+                  <div class="flex items-center justify-between font-label-technical text-label-technical">
+                    <span class="text-on-surface font-semibold">Adobe Photoshop</span>
+                    <span class="text-secondary font-label-code">ADVANCED // 95%</span>
+                  </div>
+                  <div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+                    <div class="h-full bg-primary-container rounded-full" style="width: 95%;"></div>
+                  </div>
+                </div>
+                <div class="space-y-1">
+                  <div class="flex items-center justify-between font-label-technical text-label-technical">
+                    <span class="text-on-surface font-semibold">Adobe Premiere Pro</span>
+                    <span class="text-secondary font-label-code">PROFICIENT // 82%</span>
+                  </div>
+                  <div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+                    <div class="h-full bg-on-surface rounded-full" style="width: 82%;"></div>
+                  </div>
+                </div>
+                <div class="space-y-1">
+                  <div class="flex items-center justify-between font-label-technical text-label-technical">
+                    <span class="text-on-surface font-semibold">Adobe After Effects</span>
+                    <span class="text-secondary font-label-code">INTERMEDIATE // 75%</span>
+                  </div>
+                  <div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+                    <div class="h-full bg-on-surface rounded-full" style="width: 75%;"></div>
+                  </div>
+                </div>
+                <div class="space-y-1">
+                  <div class="flex items-center justify-between font-label-technical text-label-technical">
+                    <span class="text-on-surface font-semibold">CapCut Desktop Pro</span>
+                    <span class="text-secondary font-label-code">ADVANCED // 94%</span>
+                  </div>
+                  <div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+                    <div class="h-full bg-primary-container rounded-full" style="width: 94%;"></div>
+                  </div>
+                </div>
+                <div class="space-y-1">
+                  <div class="flex items-center justify-between font-label-technical text-label-technical">
+                    <span class="text-on-surface font-semibold">Canva Pro Architecture</span>
+                    <span class="text-secondary font-label-code">EXPERT // 98%</span>
+                  </div>
+                  <div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+                    <div class="h-full bg-primary-container rounded-full" style="width: 98%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-6 flex flex-col gap-space-md">
+              <div class="bg-surface-container-low p-space-lg rounded-2xl border border-neutral-200">
+                <div class="flex items-center justify-between mb-space-sm">
+                  <span class="font-label-technical text-label-technical uppercase tracking-wider text-on-surface font-bold">
+                    ACADEMIC ACCREDITATION
+                  </span>
+                  <span class="px-2 py-0.5 rounded bg-surface-container-highest font-label-code text-label-code text-on-surface">
+                    ACTIVE STATUS
+                  </span>
+                </div>
+                <div class="p-space-md bg-surface-container-lowest rounded-xl border border-neutral-200">
+                  <div class="flex items-center gap-space-sm">
+                    <div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center font-headline-sm font-bold">
+                      10
+                    </div>
+                    <div class="flex flex-col">
+                      <h4 class="font-title-md text-title-md font-bold text-on-surface">SMKN 10 Surabaya</h4>
+                      <span class="font-body-sm text-body-sm text-primary-container font-semibold">
+                        Visual Communication Design (DKV) • Class XII-1
+                      </span>
+                    </div>
+                  </div>
+                  <p class="font-body-sm text-body-sm text-secondary mt-space-sm">
+                    Rigorous vocational curriculum centered on digital illustration, publication systems, corporate brand engineering, and multimedia audiovisual storytelling.
+                  </p>
+                </div>
+              </div>
+
+              <div class="bg-surface-container-low p-space-lg rounded-2xl border border-neutral-200">
+                <span class="font-label-technical text-label-technical uppercase tracking-wider text-on-surface font-bold mb-space-sm block">
+                  CORE FUNCTIONAL COMPETENCIES
+                </span>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs font-label-technical text-label-technical uppercase">
+                  <div class="flex items-center gap-2 p-2 bg-surface-container-lowest rounded border border-neutral-100"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span><span class="text-on-surface">Graphic Design</span></div>
+                  <div class="flex items-center gap-2 p-2 bg-surface-container-lowest rounded border border-neutral-100"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span><span class="text-on-surface">Studio Photography</span></div>
+                  <div class="flex items-center gap-2 p-2 bg-surface-container-lowest rounded border border-neutral-100"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span><span class="text-on-surface">Photo Retouching</span></div>
+                  <div class="flex items-center gap-2 p-2 bg-surface-container-lowest rounded border border-neutral-100"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span><span class="text-on-surface">Video &amp; Motion Editing</span></div>
+                  <div class="flex items-center gap-2 p-2 bg-surface-container-lowest rounded border border-neutral-100"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span><span class="text-on-surface">Brand Identity Systems</span></div>
+                  <div class="flex items-center gap-2 p-2 bg-surface-container-lowest rounded border border-neutral-100"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span><span class="text-on-surface">Social Media Direction</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================== -->
+      <!-- 06. CORPORATE DARK FOOTER ("05 // COLLAB") -->
+      <!-- ========================================== -->
+      <section class="w-full bg-inverse-surface text-inverse-on-surface py-space-xl">
+        <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-end pb-space-xl border-b border-surface-variant/20">
+            <div class="lg:col-span-8 flex flex-col gap-space-sm">
+              <div class="flex items-center gap-space-xs">
+                <span class="w-2.5 h-2.5 rounded-full bg-primary-container inline-block"></span>
+                <span class="font-label-technical text-label-technical tracking-widest text-primary-fixed uppercase font-semibold">
+                  05 // CONNECT &amp; COLLABORATE
+                </span>
+              </div>
+              <h2 class="font-display-hero text-headline-lg md:text-display-hero uppercase tracking-tighter text-inverse-on-surface font-extrabold leading-none">
+                READY TO CREATE <br class="hidden sm:inline">SOMETHING <span class="text-primary-container">BOLD.</span>
+              </h2>
+              <p class="font-body-lg text-body-lg text-surface-variant max-w-xl">
+                Available for corporate freelance commissions, identity guidelines, commercial photography sessions, and agency internships.
+              </p>
+            </div>
+            <div class="lg:col-span-4 flex flex-col gap-space-md">
+              <div class="p-space-md bg-inverse-surface/80 rounded-xl border border-white/10">
+                <div class="font-label-code text-label-code text-surface-variant uppercase tracking-widest">
+                  BASE TELEMETRICS &amp; TIMEZONE
+                </div>
+                <div class="font-headline-sm text-headline-sm font-bold text-inverse-on-surface mt-1 flex items-center gap-2">
+                  <span class="material-symbols-outlined text-primary-container text-[20px]">schedule</span>
+                  <span id="surabaya-clock">10:43:30 WIB • SURABAYA, ID</span>
+                </div>
+                <span class="font-label-technical text-label-technical text-surface-variant tracking-wider uppercase">
+                  STATUS: READY FOR ENGAGEMENT
+                </span>
+              </div>
+              <a class="inline-flex items-center justify-center gap-space-xs w-full py-space-sm bg-primary-container text-on-primary font-headline-sm text-title-md uppercase tracking-wider rounded-lg shadow hover:opacity-90 transition-opacity" href="#" onclick="window.print(); return false;">
+                <span>PRINT / SAVE CV (PDF)</span>
+                <span class="material-symbols-outlined text-[18px]">print</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-space-md py-space-lg">
+            <div class="flex flex-col">
+              <span class="font-label-code text-label-code text-surface-variant uppercase tracking-widest">ELECTRONIC MAIL</span>
+              <a class="font-body-sm text-body-sm text-inverse-on-surface hover:text-primary-fixed font-semibold mt-1 transition-colors" href="mailto:zakkiramadhan01@gmail.com">
+                zakkiramadhan01@gmail.com
+              </a>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label-code text-label-code text-surface-variant uppercase tracking-widest">INSTAGRAM PROTOCOL</span>
+              <a class="font-body-sm text-body-sm text-inverse-on-surface hover:text-primary-fixed font-semibold mt-1 transition-colors" href="https://instagram.com" rel="noopener noreferrer" target="_blank">
+                @zkkirmd
+              </a>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label-code text-label-code text-surface-variant uppercase tracking-widest">WHATSAPP SECURE</span>
+              <a class="font-body-sm text-body-sm text-inverse-on-surface hover:text-primary-fixed font-semibold mt-1 transition-colors" href="#" onclick="alert('Opening WhatsApp gateway: +62 851-5743-6550'); return false;">
+                Surabaya Hotline Dispatch
+              </a>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label-code text-label-code text-surface-variant uppercase tracking-widest">ACCREDITED ACADEMY</span>
+              <span class="font-body-sm text-body-sm text-inverse-on-surface font-semibold mt-1">
+                SMKN 10 Surabaya // DKV
+              </span>
+            </div>
+          </div>
+
+          <div class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-xs text-surface-variant font-label-code text-label-code uppercase tracking-wider">
+            <span>© 2026 MOHAMMAD ZAKKI RAMADHAN. VISUAL COMMUNICATION DESIGN.</span>
+            <span>INSPIRED BY PRECISION AUTOMOTIVE DESIGN // TOYOTA SPEC v2.6</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Interactive Scripts: Hero Slider, 2-Finger Touchpad Swipe, & Spinning TC-4 Rim Cursor -->
+    <script>
+      // 1. Full-bleed Showcase Slider Controller
+      let heroCurrentIndex = 0;
+      const heroSlideElements = document.querySelectorAll('.hero-slide');
+      const heroTotalCount = heroSlideElements.length;
+      const heroCatEl = document.getElementById('hero-live-cat');
+      const heroHeadlineEl = document.getElementById('hero-live-headline');
+      const heroSubEl = document.getElementById('hero-live-sub');
+      const heroSoftwareEl = document.getElementById('hero-live-software');
+      const heroCounterCurrentEl = document.getElementById('hero-live-counter-current');
+      const heroPipButtons = document.querySelectorAll('#hero-pips button');
+      const heroSectionContainer = document.getElementById('hero-slider-section');
+      let heroSliderTimer = null;
+
+      function setHeroSlide(idx) {
+        if (idx < 0) {
+          heroCurrentIndex = heroTotalCount - 1;
+        } else if (idx >= heroTotalCount) {
+          heroCurrentIndex = 0;
+        } else {
+          heroCurrentIndex = idx;
+        }
+
+        heroSlideElements.forEach((slide, i) => {
+          if (i === heroCurrentIndex) {
+            slide.classList.remove('opacity-0', 'pointer-events-none', 'z-0');
+            slide.classList.add('opacity-100', 'pointer-events-auto', 'z-10');
+
+            const cat = slide.getAttribute('data-cat') || '';
+            const headline = slide.getAttribute('data-headline') || '';
+            const sub = slide.getAttribute('data-sub') || '';
+            const software = slide.getAttribute('data-software') || '';
+
+            if (heroCatEl) heroCatEl.textContent = cat;
+            if (heroHeadlineEl) heroHeadlineEl.textContent = headline;
+            if (heroSubEl) heroSubEl.textContent = sub;
+            if (heroSoftwareEl) heroSoftwareEl.textContent = software;
+          } else {
+            slide.classList.remove('opacity-100', 'pointer-events-auto', 'z-10');
+            slide.classList.add('opacity-0', 'pointer-events-none', 'z-0');
+          }
+        });
+
+        if (heroCounterCurrentEl) {
+          heroCounterCurrentEl.textContent = String(heroCurrentIndex + 1).padStart(2, '0');
+        }
+
+        heroPipButtons.forEach((pip, i) => {
+          if (i === heroCurrentIndex) {
+            pip.className = 'h-1.5 w-7 rounded-full bg-[#EB0A1E] transition-all duration-300';
+          } else {
+            pip.className = 'h-1.5 w-2 rounded-full bg-white/40 hover:bg-white/80 transition-all duration-300';
+          }
+        });
+      }
+
+      function heroNext() {
+        setHeroSlide(heroCurrentIndex + 1);
+      }
+
+      function heroPrev() {
+        setHeroSlide(heroCurrentIndex - 1);
+      }
+
+      function heroGoTo(index) {
+        setHeroSlide(index);
+        resetHeroAutoplay();
+      }
+
+      function startHeroAutoplay() {
+        if (!heroSliderTimer) {
+          heroSliderTimer = setInterval(heroNext, 5000);
+        }
+      }
+
+      function pauseHeroAutoplay() {
+        if (heroSliderTimer) {
+          clearInterval(heroSliderTimer);
+          heroSliderTimer = null;
+        }
+      }
+
+      function resetHeroAutoplay() {
+        pauseHeroAutoplay();
+        startHeroAutoplay();
+      }
+
+      if (heroSectionContainer) {
+        heroSectionContainer.addEventListener('mouseenter', pauseHeroAutoplay);
+        heroSectionContainer.addEventListener('mouseleave', startHeroAutoplay);
+
+        // 2-Finger Horizontal Touchpad Swipe pada Hero Banner
+        let wheelSwipeLock = false;
+        heroSectionContainer.addEventListener('wheel', (e) => {
+          if (Math.abs(e.deltaX) > Math.abs(e.deltaY) && Math.abs(e.deltaX) > 25) {
+            e.preventDefault();
+            if (wheelSwipeLock) return;
+            wheelSwipeLock = true;
+            if (e.deltaX > 0) heroNext();
+            else heroPrev();
+            resetHeroAutoplay();
+            setTimeout(() => { wheelSwipeLock = false; }, 650);
+          }
+        }, { passive: false });
+
+        // Touch Swipe untuk Touchscreen / Mobile
+        let touchStartX = 0;
+        let touchStartY = 0;
+        heroSectionContainer.addEventListener('touchstart', (e) => {
+          touchStartX = e.changedTouches[0].screenX;
+          touchStartY = e.changedTouches[0].screenY;
+        }, { passive: true });
+
+        heroSectionContainer.addEventListener('touchend', (e) => {
+          const dx = e.changedTouches[0].screenX - touchStartX;
+          const dy = e.changedTouches[0].screenY - touchStartY;
+          if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 45) {
+            if (dx < 0) heroNext();
+            else heroPrev();
+            resetHeroAutoplay();
+          }
+        }, { passive: true });
+      }
+
+      // Keyboard Arrow Left/Right
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') { heroNext(); resetHeroAutoplay(); }
+        if (e.key === 'ArrowLeft') { heroPrev(); resetHeroAutoplay(); }
+      });
+
+      // Init Hero
+      setHeroSlide(0);
+      startHeroAutoplay();
+
+      // 2. Filter Tabs Logic for Industrial Experience
+      function filterExp(type) {
+        const cardIts = document.getElementById('exp-its');
+        const cardApril = document.getElementById('exp-april');
+        const tabAll = document.getElementById('tab-all');
+        const tabIts = document.getElementById('tab-its');
+        const tabApril = document.getElementById('tab-april');
+
+        [tabAll, tabIts, tabApril].forEach(tab => {
+          tab.classList.remove('bg-surface-container-lowest', 'text-primary-container', 'font-bold', 'shadow-sm');
+          tab.classList.add('text-secondary');
+        });
+
+        if (type === 'all') {
+          cardIts.style.display = 'block';
+          cardApril.style.display = 'block';
+          tabAll.classList.add('bg-surface-container-lowest', 'text-primary-container', 'font-bold', 'shadow-sm');
+          tabAll.classList.remove('text-secondary');
+        } else if (type === 'its') {
+          cardIts.style.display = 'block';
+          cardApril.style.display = 'none';
+          tabIts.classList.add('bg-surface-container-lowest', 'text-primary-container', 'font-bold', 'shadow-sm');
+          tabIts.classList.remove('text-secondary');
+        } else if (type === 'april') {
+          cardIts.style.display = 'none';
+          cardApril.style.display = 'block';
+          tabApril.classList.add('bg-surface-container-lowest', 'text-primary-container', 'font-bold', 'shadow-sm');
+          tabApril.classList.remove('text-secondary');
+        }
+      }
+
+      // 3. Live Surabaya (WIB - UTC+7) Clock Update
+      function updateSurabayaClock() {
+        const now = new Date();
+        const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+        const wibDate = new Date(utc + (3600000 * 7));
+
+        const hours = String(wibDate.getHours()).padStart(2, '0');
+        const minutes = String(wibDate.getMinutes()).padStart(2, '0');
+        const seconds = String(wibDate.getSeconds()).padStart(2, '0');
+
+        const clockEl = document.getElementById('surabaya-clock');
+        if (clockEl) {
+          clockEl.textContent = `${hours}:${minutes}:${seconds} WIB • SURABAYA, ID`;
+        }
+      }
+
+      updateSurabayaClock();
+      setInterval(updateSurabayaClock, 1000);
+
+      // 4. Spinning Advan Racing TC-4 Wheel Cursor Engine
+      (function initTC4Cursor() {
+        const cursor = document.getElementById('tc4-cursor');
+        const wheelSvg = document.getElementById('tc4-wheel-svg');
+        if (!cursor || !wheelSvg || !window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+
+        let mouseX = -100;
+        let mouseY = -100;
+        let lastX = -100;
+        let lastY = -100;
+        let lastScrollY = window.scrollY;
+        let wheelAngle = 0;
+        let spinVelocity = 1.2; // Kecepatan putar idle lembut
+
+        window.addEventListener('mousemove', (e) => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+          if (lastX !== -100) {
+            const dx = mouseX - lastX;
+            const dy = mouseY - lastY;
+            const speed = Math.hypot(dx, dy);
+            const dir = dx >= 0 ? 1 : -1;
+            spinVelocity = Math.max(-28, Math.min(28, spinVelocity + dir * speed * 0.22));
+          }
+          lastX = mouseX;
+          lastY = mouseY;
+
+          const interactive = e.target.closest('a, button, [role="button"], input, textarea, select');
+          cursor.classList.toggle('is-hover', Boolean(interactive));
+        }, { passive: true });
+
+        window.addEventListener('scroll', () => {
+          const currentScrollY = window.scrollY;
+          const deltaScroll = currentScrollY - lastScrollY;
+          lastScrollY = currentScrollY;
+          spinVelocity = Math.max(-32, Math.min(32, spinVelocity + deltaScroll * 0.25));
+        }, { passive: true });
+
+        window.addEventListener('mousedown', () => cursor.classList.add('is-down'), { passive: true });
+        window.addEventListener('mouseup', () => cursor.classList.remove('is-down'), { passive: true });
+
+        document.addEventListener('mouseleave', () => { cursor.style.opacity = '0'; });
+        document.addEventListener('mouseenter', () => { cursor.style.opacity = '1'; });
+
+        function animateWheel() {
+          wheelAngle = (wheelAngle + spinVelocity) % 360;
+          // Perlahan kembali ke kecepatan putar idle (RPM konstan pelan)
+          const targetIdle = spinVelocity >= 0 ? 1.1 : -1.1;
+          spinVelocity += (targetIdle - spinVelocity) * 0.06;
+
+          cursor.style.transform = `translate3d(${mouseX - 20}px, ${mouseY - 20}px, 0)`;
+          wheelSvg.style.transform = `rotate(${wheelAngle}deg)`;
+          requestAnimationFrame(animateWheel);
+        }
+        requestAnimationFrame(animateWheel);
+      })();
+    </script>
+  </main>
+
+  <footer class="w-full bg-inverse-surface text-inverse-on-surface border-t border-surface-container-high">
+    <div class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin py-space-xl">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter pb-space-lg border-b border-surface-variant/20">
+        <div class="md:col-span-6 flex flex-col gap-space-sm">
+          <div class="flex items-center gap-space-sm">
+            <span class="w-2 h-2 rounded-full bg-primary-container inline-block"></span>
+            <span class="font-label-technical text-label-technical tracking-widest text-inverse-on-surface uppercase">Specification Sheet // DKV Archive</span>
+          </div>
+          <h3 class="font-headline-md text-headline-md text-inverse-on-surface tracking-tight">Precision-engineered visual identities &amp; technical design systems.</h3>
+          <p class="font-body-md text-body-md text-surface-variant max-w-lg">Structured visual communication design inspired by Toyota Astra Indonesia and high-performance automotive telemetrics.</p>
+        </div>
+        <div class="md:col-span-3 flex flex-col gap-space-xs">
+          <span class="font-label-code text-label-code text-surface-variant uppercase tracking-widest mb-space-xs">Navigation Manifest</span>
+          <a class="font-body-sm text-body-sm text-inverse-on-surface hover:text-primary-fixed transition-colors" href="#">Automotive Brand Guidelines</a>
+          <a class="font-body-sm text-body-sm text-inverse-on-surface hover:text-primary-fixed transition-colors" data-path="projects" href="#projects">Engineering Showcases</a>
+          <a class="font-body-sm text-body-sm text-inverse-on-surface hover:text-primary-fixed transition-colors" data-path="experience" href="#experience">Production Log &amp; History</a>
+          <a class="font-body-sm text-body-sm text-inverse-on-surface hover:text-primary-fixed transition-colors" data-path="skills" href="#capabilities">Design Telemetry &amp; Tools</a>
+        </div>
+        <div class="md:col-span-3 flex flex-col gap-space-xs">
+          <span class="font-label-code text-label-code text-surface-variant uppercase tracking-widest mb-space-xs">Telemetry &amp; Coordinates</span>
+          <span class="font-label-technical text-label-technical text-inverse-on-surface">LOC // Surabaya, Indonesia</span>
+          <span class="font-label-technical text-label-technical text-inverse-on-surface">SYSTEM // Visual Communication (DKV)</span>
+          <span class="font-label-technical text-label-technical text-inverse-on-surface">STATUS // Ready for Commission</span>
+        </div>
+      </div>
+      <div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+        <div class="font-label-code text-label-code text-surface-variant tracking-wider uppercase">© 2026 MOHAMMAD ZAKKI RAMADHAN. ALL SPECIFICATIONS RESERVED.</div>
+        <div class="font-label-code text-label-code text-surface-variant tracking-wider uppercase">ENGINEERED CHASSIS FRAMEWORK v2.6</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
